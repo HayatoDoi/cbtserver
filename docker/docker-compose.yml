@@ -1,0 +1,46 @@
+version: "3.0"
+services:
+  # Middleware
+  nginx:
+    build: "./container/nginx"
+    ports:
+      - "80:80"
+    volumes:
+      - "../src:/var/www/html"
+    links:
+      - "php-fpm"
+    container_name: "cbtserver_nginx"
+
+  # Application
+  php-fpm:
+    build: "./container/php-fpm"
+    volumes:
+      - "../src:/var/www/html/"
+    links:
+      - "mysql"
+    environment:
+      - "DATABASE_HOST=mysql"
+    env_file: ".env"
+    container_name: "cbtserver_php-fpm"
+
+  # Database
+  mysql:
+    image: "mysql"
+    volumes:
+      - "./container/mysql/volume:/var/lib/mysql"
+    env_file: ".env"
+    ports:
+       - "3306:3306"
+    container_name: "cbtserver_mysql"
+
+  phpmyadmin:
+    image: "phpmyadmin/phpmyadmin"
+    environment:
+      - "PMA_ARBITRARY=1"
+      - "PMA_HOST=mysql"
+    links:
+      - "mysql"
+    ports:
+       - "8080:80"
+
+    container_name: "cbtserver_phpmyadmin"
