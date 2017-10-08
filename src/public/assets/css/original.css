@@ -1,0 +1,18 @@
+/*
+ * original.css
+*/
+
+a.button-update {
+  background-color:#FF9900;
+  border-color:#FF9900;
+}
+a.button-delete {
+  background-color:#FF0000;
+  border-color:#FF0000;
+}
+a.button-plus {
+  width: 100%;
+  color: #000000;
+  background-color:#FFFFFF;
+  border-color:#C3C3C3;
+}
