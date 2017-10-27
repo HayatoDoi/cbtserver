@@ -60,7 +60,7 @@ class UserModel extends ModelBase
     var_dump($score);
     //得点,回答済みフラグの更新
     $qId = sprintf('%02d', $qId);
-    $query = "UPDATE users SET question$qId = true, score = score + $score, update_time = NOW() WHERE name = '$username';";
+    $query = "UPDATE users SET question$qId = true, score = score + $score, score_update_time = NOW() WHERE name = '$username';";
     var_dump($query);
     $sth = $this->db->query($query);
   }
