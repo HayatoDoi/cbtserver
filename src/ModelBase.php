@@ -22,7 +22,7 @@ class ModelBase
   {
     $dataBaseConfig = new DataBaseConfigClass();
     $dsn = sprintf(
-      'mysql:host=%s;dbname=%s',
+      'mysql:host=%s;dbname=%s;charset=utf8mb4',
       $dataBaseConfig->HOST,
       $dataBaseConfig->DB
     );
