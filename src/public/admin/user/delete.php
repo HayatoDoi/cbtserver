@@ -8,5 +8,5 @@ $userModel = new UserModel();
 $name = $_GET['name'];
 
 $userModel->delete($name);
-// header('Location: /admin/user');
-// exit;
+header('Location: /admin/user');
+exit;
