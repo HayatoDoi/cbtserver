@@ -22,7 +22,14 @@ class HtmlTemplateClass
 
         <ul class="navigation-list float-right">
           <li class="navigation-item">
-            <a href="/logout.php" class="navigation-link">Logout( $username )</a>
+            <div class="dropdown">
+              <a class="navigation-link">$username</a>
+              <div class="dropdown-content">
+                <a href="/logout.php">logout</a>
+                <a href="/user.php?id=$username">Your profile</a>
+                <a href="/profile/edit.php">Edit profile</a>
+              </div>
+            </div>
           </li>
         </ul>
       </section>

@@ -16,3 +16,34 @@ a.button-plus {
   background-color:#FFFFFF;
   border-color:#C3C3C3;
 }
+
+.dropdown {
+  padding:0px 0px;
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  padding: 5px 5px;
+  position: absolute;
+  background-color: #f4f5f6;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 5px 5px;
+  width: 150px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #d2aeeb;
+}
+
+.dropdown:hover .dropdown-content {
+  display: inline;
+}

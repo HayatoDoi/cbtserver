@@ -8,6 +8,13 @@ class UserModel extends ModelBase
 {
   protected $table = 'users';
 
+  public function findName($username)
+  {
+    $query = "SELECT * FROM users WHERE name = '$username';";
+    $sth = $this->db->query($query);
+    return $sth->fetchAll()[0];
+  }
+
   public function register($user, $password)
   {
     $query = "INSERT INTO users(name, password) VALUES('$user', '$password');";
@@ -49,6 +56,12 @@ class UserModel extends ModelBase
     $qId = sprintf('%02d', $qId);
     $query = "UPDATE users SET question$qId = true, score = score + $score, update_time = NOW() WHERE name = '$username';";
     var_dump($query);
+    $sth = $this->db->query($query);
+  }
+
+  public function updateSelfIntroduction($username, $self_introduction)
+  {
+    $query = "UPDATE users SET self_introduction = '$self_introduction' WHERE name = '$username';";
     $sth = $this->db->query($query);
   }
 }
