@@ -72,7 +72,6 @@ EOT;
     $assetsPath .= AssetClass::path('css', 'milligram.min.css');
     $assetsPath .= AssetClass::path('css', 'main.css');
     $assetsPath .= AssetClass::path('css', 'original.css');
-    $assetsPath .= AssetClass::path('js', 'hoge.js');
 
     $head = <<<EOT
     <head>
