@@ -80,7 +80,6 @@ EOT;
       <meta name="author" content="HayatoDoi">
 
       <title>cbtserver</title>
-      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
       $assetsPath
     </head>
 EOT;
