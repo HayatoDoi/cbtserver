@@ -4,9 +4,9 @@
  * POST /user/register.php　ユーザ登録処理→ログイン処理→リダイレクト
  *
  */
-require_once '../HtmlTemplateClass.php';
-require_once '../SessionClass.php';
-require_once '../UserModel.php';
+require_once '../../HtmlTemplateClass.php';
+require_once '../../SessionClass.php';
+require_once '../../UserModel.php';
 SessionClass::unlogined();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
