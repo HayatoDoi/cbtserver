@@ -4,7 +4,7 @@
  *
  */
 
-$mimeList = array('assets/css'=>'text/css', 'assets/js'=>'text/javascript');
+$mimeList = array('assets/css'=>'text/css', 'assets/js'=>'text/javascript', 'assets/font'=>'font/woff2');
 $filename = 'assets/' . $_GET['file'];
 
 //ファイルがなかったら。

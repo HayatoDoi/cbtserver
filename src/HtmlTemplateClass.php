@@ -66,9 +66,14 @@ EOT;
   public static function dumpHead()
   {
     require_once 'AssetClass.php';
-    $assetsPath1 = AssetClass::path('css', 'main.css');
-    $assetsPath2 = AssetClass::path('css', 'original.css');
-    $assetsPath3 = AssetClass::path('js', 'hoge.js');
+    $assetsPath  = '';
+    $assetsPath .= AssetClass::path('css', 'font.css');
+    $assetsPath .= AssetClass::path('css', 'normalize.css');
+    $assetsPath .= AssetClass::path('css', 'milligram.min.css');
+    $assetsPath .= AssetClass::path('css', 'main.css');
+    $assetsPath .= AssetClass::path('css', 'original.css');
+    $assetsPath .= AssetClass::path('js', 'hoge.js');
+
     $head = <<<EOT
     <head>
       <meta charset="utf-8">
@@ -77,11 +82,7 @@ EOT;
 
       <title>cbtserver</title>
       <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
-      <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
-      <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
-      $assetsPath1
-      $assetsPath2
-      $assetsPath3
+      $assetsPath
     </head>
 EOT;
     return $head;
