@@ -25,7 +25,7 @@ class UserModel extends ModelBase
   public function ranking()
   {
     // $query = "SELECT * FROM users;";
-    $query = "SELECT * FROM users order by score desc,update_time asc;";
+    $query = "SELECT * FROM users order by score desc,score_update_time asc;";
     $sth = $this->db->query($query);
     return $sth->fetchAll();
   }

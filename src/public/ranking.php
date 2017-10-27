@@ -34,7 +34,7 @@ $userRank = $userModel->ranking();
               <?php foreach($userRank as $row) : ?>
                 <tr>
                   <td><?=$i++ ?></td>
-                  <td><?=$row['name'] ?></td>
+                  <td><a href="/user.php?id=<?=$row['name'] ?>"><?=$row['name'] ?></a></td>
                   <td><?=$row['score'] ?></td>
                 </tr>
               <?php endforeach; ?>
