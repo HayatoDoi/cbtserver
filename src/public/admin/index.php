@@ -25,6 +25,9 @@ require_once '../../HtmlTemplateClass.php';
                   <td>問題管理</td>
                   <td><a class="button button-update" href="/admin/question/">OPEN</a></td>
                 </tr>
+                <td>ユーザー管理</td>
+                  <td><a class="button button-update" href="/admin/user/">OPEN</a></td>
+                </tr>
             </tbody>
           </table>
         </section>

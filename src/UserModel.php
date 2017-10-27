@@ -15,6 +15,12 @@ class UserModel extends ModelBase
     return $sth->fetchAll()[0];
   }
 
+  public function delete($username)
+  {
+    $query = "DELETE FROM users WHERE name = '$username';";
+    $sth = $this->db->query($query);
+  }
+
   public function register($user, $password)
   {
     $query = "INSERT INTO users(name, password) VALUES('$user', '$password');";
