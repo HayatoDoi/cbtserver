@@ -17,10 +17,10 @@ class SessionClass
   {
     // セッション開始
     @session_start();
-    // ログインしていなければlogin.phpに遷移
+    // ログインしていなければ/user/login.phpに遷移
     if (!isset($_SESSION["username"]))
     {
-      header('Location: /login.php');
+      header('Location: /user/login.php');
       exit;
     }
   }

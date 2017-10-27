@@ -1,7 +1,7 @@
 <?php
 /**
- * GET  /login.php ログインフォームを表示
- * POST /login.php パスワードチャック→ログイン処理→リダイレクト
+ * GET  /user/login.php ログインフォームを表示
+ * POST /user/login.php パスワードチャック→ログイン処理→リダイレクト
  *
  */
 require_once '../HtmlTemplateClass.php';
@@ -74,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
             </p>
             <input type="submit" value="Login" class="button-primary">
             <div class="float-right">
-              <a href="/register.php">アカウントの作成</a>
+              <a href="/user/register.php">アカウントの作成</a>
             </div>
             </fieldset>
           </form>

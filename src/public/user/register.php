@@ -1,7 +1,7 @@
 <?php
 /**
- * GET  /register.php ユーザ登録フォームを表示
- * POST /register.php　ユーザ登録処理→ログイン処理→リダイレクト
+ * GET  /user/register.php ユーザ登録フォームを表示
+ * POST /user/register.php　ユーザ登録処理→ログイン処理→リダイレクト
  *
  */
 require_once '../HtmlTemplateClass.php';
