@@ -7,7 +7,7 @@ class HtmlTemplateClass
     //ログイン済みの場合
     if(isset($_SESSION['username']))
     {
-      $username = $_SESSION['username'];
+      $username = htmlspecialchars($_SESSION['username'], ENT_QUOTES, 'UTF-8');
       $nav = <<<EOT
       <nav class="navigation">
       <section class="container">

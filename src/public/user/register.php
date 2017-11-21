@@ -20,6 +20,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
   {
     $formError = '空の項目が存在します';
   }
+  else if(!preg_match('/^[a-zA-Z0-9]+$/',$username))
+  {
+    $formError = 'ユーザ名は半角英数字で入力してください。';
+  }
   else if($password !== $password_confirmation)
   {
     $formError = 'パスワードが一致しません。';
@@ -58,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
           <form action="" method="post">
             <fieldset>
             <label for="username">ユーザ名</label>
-            <input type="text" name="username" value="<?php if(isset($username)){ echo $username; } ?>">
+            <input pattern="^[a-zA-Z0-9]+$" type="text" name="username" value="<?php if(isset($username)){ echo $username; } ?>">
             
             <label for="password">パスワード</label>
             <input type="password" name="password">
