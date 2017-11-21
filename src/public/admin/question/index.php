@@ -43,7 +43,7 @@ $questions = $questionModel->all();
               <?php endforeach; ?>
             </tbody>
           </table>
-          <a class="button button-plus" href="/admin/question/new.php"><h3>+</h3></a>
+          <a class="button button-plus-wide" href="/admin/question/new.php"><h3>+</h3></a>
         </section>
       <?=HtmlTemplateClass::dumpFooter(); ?>
     </main>

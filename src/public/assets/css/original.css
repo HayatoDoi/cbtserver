@@ -10,7 +10,12 @@ a.button-delete {
   background-color:#FF0000;
   border-color:#FF0000;
 }
-a.button-plus {
+a.button-delete-wide {
+  width: 100%;
+  background-color:#FF0000;
+  border-color:#FF0000;
+}
+a.button-plus-wide {
   width: 100%;
   color: #000000;
   background-color:#FFFFFF;

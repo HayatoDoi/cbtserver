@@ -32,9 +32,8 @@ $users = $userModel->all();
               <?php foreach($users as $user) : ?>
                 <tr>
                   <td><?=htmlspecialchars($user['name'], ENT_QUOTES, 'UTF-8') ?></td>
-                  <td><?=$user['self_introduction'] ?></td>
                   <td width="200">
-                    <a class="button button-delete" href="/admin/user/delete.php?name=<?=htmlspecialchars($user['name'], ENT_QUOTES, 'UTF-8') ?>">削除</a>
+                    <a class="button button-update" href="/admin/user/profile.php?id=<?=htmlspecialchars($user['name'], ENT_QUOTES, 'UTF-8') ?>">Open</a>
                   </td>
                 </tr>
               <?php endforeach; ?>
